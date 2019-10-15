@@ -3,6 +3,8 @@ import { HttpService } from '../http.service';
 import { Movie } from './Movie';
 import { DataService } from "../data.service";
 import { ActivatedRoute, Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-details',
@@ -17,6 +19,7 @@ export class DetailsComponent implements OnInit {
 	private data:DataService,
 	private myElement: ElementRef,
 	private router:Router,
+	private titleService:Title,
   )
   { }
   
@@ -31,7 +34,10 @@ export class DetailsComponent implements OnInit {
 	let id = this.data.movieSource.getValue();
 	if(!id) this.router.navigate(['/']);
     this.httpService.getMovieDetails(id)
-      .subscribe(movie => (this.movie = movie));
+      .subscribe(movie => {
+		   this.titleService.setTitle( movie.Title );
+		   this.movie = movie;
+	  });
   }
 
 }

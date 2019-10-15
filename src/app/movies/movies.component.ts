@@ -5,7 +5,7 @@ import { MovieSearch } from './MovieSearch';
 import { BehaviorSubject, pipe } from 'rxjs';
 import { catchError, retry, map, tap, take } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movies',
@@ -21,20 +21,21 @@ export class MoviesComponent implements OnInit {
   
   movies:MovieSearch = <MovieSearch>{};
   moviesBS: any   ;
-  
+  title = 'Movies List'
   constructor
   (
 	private httpService:HttpService,
 	private data:DataService,
 	private myElement: ElementRef,
 	private router:Router,
+	private titleService:Title,
   )
   { }
 	
  
   ngOnInit() {
     this.getMovies();
-	console.log(this.data.searchSource.getValue());
+	this.titleService.setTitle( this.title );
 	this.page = (this.data.searchSource.getValue()) ? this.data.searchSource.getValue().length/10 : 1;
 	setTimeout(()=>{
 		this.scrollTo()
