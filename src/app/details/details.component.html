@@ -6,7 +6,7 @@
     <h5 class="card-title">{{(movie?.Title || '')}}</h5>
    
    	<p class="card-text"><b>Year:</b> {{movie.Year}}</p>
-	<p class="card-text"><b>Rated:</b> {{movie.movieRated}}</p>
+	<p class="card-text"><b>Rated:</b> {{movie.Rated}}</p>
 	<p class="card-text"><b>Released:</b> {{movie.Released}}</p>
 	<p class="card-text"><b>Runtime:</b> {{movie.Runtime}}</p>
 	<p class="card-text"><b>Genre:</b> {{movie.Genre}}</p>
@@ -16,7 +16,7 @@
 	<p class="card-text"><b>Language:</b> {{movie.Language}}</p>
 	<p class="card-text"><b>Country:</b> {{movie.Country}}</p>
 	<p class="card-text"><b>Awards:</b> {{movie.Awards}}</p>
-	<p class="card-text"><b>Ratings:</b> {{movie.Ratings}}</p>
+	<p class="card-text"><b>Ratings:</b> <span *ngFor="let item of movie.Ratings"> {{item.Source}}: {{item.Value}}<br></span></p>
 	<p class="card-text"><b>Metascore:</b> {{movie.Metascore}}</p>
 	<p class="card-text"><b>imdbRating:</b> {{movie.imdbRating}}</p>
 	<p class="card-text"><b>imdbVotes:</b> {{movie.imdbVotes}}</p>

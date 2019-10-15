@@ -28,6 +28,6 @@ export interface Movie
 
 export interface Ratings
 {
-	source: string;
-	value: string;
+	Source: string;
+	Value: string;
 }
