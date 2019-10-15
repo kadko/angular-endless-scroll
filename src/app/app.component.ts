@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title = 'Movie App';
   
   constructor
@@ -23,8 +23,5 @@ export class AppComponent implements OnInit{
   homeClick(){
 	this.setTitle();
   }
- 
-  ngOnInit(){
-	  this.setTitle();
-  }
+
 }
