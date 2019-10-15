@@ -5,6 +5,9 @@ import {
   HttpEvent,
   HttpInterceptor
 } from '@angular/common/http';
+
+import { environment } from '../environments/environment';
+ 
  
 import { Observable } from 'rxjs';
 @Injectable()
@@ -13,7 +16,7 @@ export class ApiKeyInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     
     request = request.clone({
-      url: request.url + '&apikey=ca60ac51'
+      url: request.url + '&apikey=' + environment.APIkey
     });
     return next.handle(request);
   }
