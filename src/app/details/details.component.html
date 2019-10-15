@@ -1,0 +1,33 @@
+<p id="tag"></p>
+
+<div class="card" style="width: 36rem;">
+  <img [src]="movie?.Poster || ''" width="50%" class="card-img-top" [alt]="(movie?.Title || '')">
+  <div class="card-body">
+    <h5 class="card-title">{{(movie?.Title || '')}}</h5>
+   
+   	<p class="card-text"><b>Year:</b> {{movie.Year}}</p>
+	<p class="card-text"><b>Rated:</b> {{movie.movieRated}}</p>
+	<p class="card-text"><b>Released:</b> {{movie.Released}}</p>
+	<p class="card-text"><b>Runtime:</b> {{movie.Runtime}}</p>
+	<p class="card-text"><b>Genre:</b> {{movie.Genre}}</p>
+	<p class="card-text"><b>Director:</b> {{movie.Director}}</p>
+	<p class="card-text"><b>Writer:</b> {{movie.Writer}}</p>
+	<p class="card-text"><b>Plot:</b> {{movie.Plot}}</p>
+	<p class="card-text"><b>Language:</b> {{movie.Language}}</p>
+	<p class="card-text"><b>Country:</b> {{movie.Country}}</p>
+	<p class="card-text"><b>Awards:</b> {{movie.Awards}}</p>
+	<p class="card-text"><b>Ratings:</b> {{movie.Ratings}}</p>
+	<p class="card-text"><b>Metascore:</b> {{movie.Metascore}}</p>
+	<p class="card-text"><b>imdbRating:</b> {{movie.imdbRating}}</p>
+	<p class="card-text"><b>imdbVotes:</b> {{movie.imdbVotes}}</p>
+	<p class="card-text"><b>Type:</b> {{movie.Type}}</p>
+	<p class="card-text"><b>DVD:</b> {{movie.DVD}}</p>
+	<p class="card-text"><b>BoxOffice:</b> {{movie.BoxOffice}}</p>
+	<p class="card-text"><b>Production:</b> {{movie.Production}}</p>
+	<p class="card-text"><b>Website:</b> {{movie.Website}}</p>
+   
+    <a href="#" class="btn btn-primary" routerLink="/movies-list">Go Back</a>
+  </div>
+</div>
+
+
