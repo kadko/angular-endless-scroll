@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, ObservableInput, throwError } from 'rxjs';
 import { catchError, retry, map, tap, take } from 'rxjs/operators';
-
 import { Movie } from './details/Movie';
 import { MovieSearch } from './movies/MovieSearch';
 

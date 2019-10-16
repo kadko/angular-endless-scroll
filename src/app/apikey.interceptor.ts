@@ -7,9 +7,8 @@ import {
 } from '@angular/common/http';
 
 import { environment } from '../environments/environment';
- 
- 
 import { Observable } from 'rxjs';
+
 @Injectable()
 export class ApiKeyInterceptor implements HttpInterceptor {
   constructor() {}

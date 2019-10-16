@@ -19,4 +19,4 @@ export class DataService {
   changeMovie(message: any) {
     this.movieSource.next(message)
   }
-} 
+}
