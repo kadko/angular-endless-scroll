@@ -25,7 +25,7 @@ export class HttpService {
        );
   }
   
-  /** GET heroes from the server */
+  /** GET movies from the server */
   getMovies (page:number): Observable<MovieSearch> {
     return this.http.get<MovieSearch>('http://www.omdbapi.com/?s=game&type=movie&page='+ page)
       .pipe(
