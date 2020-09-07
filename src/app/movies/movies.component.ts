@@ -13,15 +13,15 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  
+
   batch = 2           // size of each query
   lastKey = ''      // key to offset next query from
   finished = false  // boolean when end of database is reached
   page = 1;
   
   movies:MovieSearch = <MovieSearch>{};
-  moviesBS: any   ;
-  title = 'Movies List'
+  moviesBS: any;
+  title = 'Movies List';
   constructor
   (
 	private httpService:HttpService,
@@ -80,7 +80,6 @@ export class MoviesComponent implements OnInit {
     
     .subscribe((movies) => {
 		const newMovies = movies;
-		
 		const currentMovies = this.data.searchSource.getValue();
 		this.data.changeSearch([...currentMovies, ...newMovies.Search]);
 	})
