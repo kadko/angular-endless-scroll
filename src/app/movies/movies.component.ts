@@ -15,8 +15,8 @@ import { Title } from '@angular/platform-browser';
 export class MoviesComponent implements OnInit {
 
   batch = 2           // size of each query
-  lastKey = ''      // key to offset next query from
-  finished = false  // boolean when end of database is reached
+  lastKey = ''// key to offset next query from
+  finished = false// boolean when end of database is reached
   page = 1;
   
   movies:MovieSearch = <MovieSearch>{};
